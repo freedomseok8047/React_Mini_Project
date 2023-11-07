@@ -5,6 +5,7 @@ import Test from "./Component/Test";
 import FuncTest1 from "./Component/FuncTest1";
 import ClassTest from "./Component/ClassTest";
 import Test33 from "./Component/Test33";
+import MyComp from "./Component/MyComp";
 
 
 // 부모 컴포넌트
@@ -16,6 +17,8 @@ function App() {
       <FuncTest1 />
       <ClassTest />
       <Test33/>
+      {/* 자식 컴포넌트에게 props라는 속성 객체를 이용해서 이름 전달하기 */}
+      <MyComp name="이준석" password="1234"/>
     </>
   );
 }
