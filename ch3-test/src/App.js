@@ -8,6 +8,8 @@ import Test33 from "./Component/Test33";
 import MyComp from "./Component/MyComp";
 import MyCompPublicFunction from "./Component/MyCompPublicFunction";
 import Count from "./Component/Count";
+import MyCount from "./Component/MyCount";
+import Mysay from "./Component/Mysay";
 
 // 부모 컴포넌트
 function App() {
@@ -41,8 +43,19 @@ function App() {
       </MyCompPublicFunction>
 
       <h2>------------------------------------------------------------------------------------------</h2>
-      
+      {/* 클래스형 컴포넌트 */}
+
       <Count></Count>
+
+      <h2>------------------------------------------------------------------------------------------</h2>
+      
+      {/* 함수형 컴포넌트 */}
+
+      <MyCount/>
+
+      <h2>------------------------------------------------------------------------------------------</h2>
+      {/* 함수형 컴포넌트 간단 클릭 테스트 */}
+      <Mysay/>
 
 
     </>
