@@ -6,17 +6,18 @@ import FuncTest1 from "./Component/FuncTest1";
 import ClassTest from "./Component/ClassTest";
 import Test33 from "./Component/Test33";
 import MyComp from "./Component/MyComp";
-
+import MyCompPublicFunction from "./Component/MyCompPublicFunction";
+import Count from "./Component/Count";
 
 // 부모 컴포넌트
 function App() {
   return (
     <>
       {/* 자식 컴포넌트 출력 해보기 테스트 */}
-      <Test />
+      {/* <Test />
       <FuncTest1 />
       <ClassTest />
-      <Test33/>
+      <Test33/> */}
       {/* 자식 컴포넌트에게 props라는 속성 객체를 이용해서 이름 전달하기 */}
       {/* <MyComp name="이준석" password="1234"/> */}
 
@@ -26,7 +27,24 @@ function App() {
       {/* <MyComp/> */}
 
       {/* 자식 컴포넌트에게 children라는 속성으로 전달하기 */}
-      <MyComp>여기가 children속성이다 </MyComp>
+      {/* <MyComp name="이준석" password="1234"> 
+      여기가 children속성이다.</MyComp> */}
+
+      {/* props 타입 확인하기 */}
+      <MyComp name = "이준석" password="12345678"> 
+      이준석 어린이
+      </MyComp>
+      <h2>------------------------------------------------------------------------------------------</h2>
+      {/* 클래스형 컴포넌트 버전으로 확인하기  */}
+      <MyCompPublicFunction name = "이준석" password="12345678"> 
+      이준석 어린이
+      </MyCompPublicFunction>
+
+      <h2>------------------------------------------------------------------------------------------</h2>
+      
+      <Count></Count>
+
+
     </>
   );
 }
