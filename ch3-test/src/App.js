@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { Fragment } from "react";
+import Test from "./Component/Test";
+import FuncTest1 from "./Component/FuncTest1";
+import ClassTest from "./Component/ClassTest";
+import Test33 from "./Component/Test33";
 
+
+// 부모 컴포넌트
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* 자식 컴포넌트 출력 해보기 테스트 */}
+      <Test />
+      <FuncTest1 />
+      <ClassTest />
+      <Test33/>
+    </>
   );
 }
 
