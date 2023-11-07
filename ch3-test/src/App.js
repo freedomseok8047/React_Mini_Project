@@ -18,7 +18,9 @@ function App() {
       <ClassTest />
       <Test33/>
       {/* 자식 컴포넌트에게 props라는 속성 객체를 이용해서 이름 전달하기 */}
-      <MyComp name="이준석" password="1234"/>
+      {/* <MyComp name="이준석" password="1234"/> */}
+      {/* <MyComp/> 부모 컴포넌트에서 props 지정안하면 자식에서 받을거 없음 */}
+      <MyComp/>
     </>
   );
 }
