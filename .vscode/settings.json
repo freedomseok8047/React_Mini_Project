@@ -1,4 +1,20 @@
 {
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 20,
+  "editor.tabSize": 2,
+  "editor.fontFamily": "Arial",
+  "editor.mouseWheelZoom": true,
+  "git.autofetch": true,
+  "editor.minimap.enabled": false,
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.wordWrap": "on",
+  "liveServer.settings.donotShowInfoMsg": true,
   "editor.formatOnSave": true,
-  "prettier.requirePragma": true
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "eslint.codeActionsOnSave.rules": null
 }
