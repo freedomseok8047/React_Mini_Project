@@ -1,24 +1,16 @@
 // Main 임시 페이지
 import React from "react";
-// yarn add react-router-dom
-// npm install react-router-dom
-// 라우팅 모듈 , 도구 설치.
-// import { useNavigate } from "react-router-dom";
+// yarn add react-router-dom npm install react-router-dom 라우팅 모듈 , 도구 설치. import
+// { useNavigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
 
-// styled-component,  컴포넌트에서 좀더 편하게 css  작업하는 모듈.
-// yarn add styled-components
-// npm install styled-components
-// 확장팩: styled-components
-// 설치 후, 모듈 가져와서 사용하기.
-// 공식 문서
+// styled-component,  컴포넌트에서 좀더 편하게 css  작업하는 모듈. yarn add styled-components npm
+// install styled-components 확장팩: styled-components 설치 후, 모듈 가져와서 사용하기. 공식 문서
 // https://styled-components.com/docs/basics#getting-started
 import styled from "styled-components";
 
-// styled-component 사용해보기
-// 예제
-// styled.원하는 테그 선택 `` 백틱 열고 닫고
+// styled-component 사용해보기 예제 styled.원하는 테그 선택 `` 백틱 열고 닫고
 const MainTitleTextCss = styled.p`
   font-size: 30px;
   font-weight: bold;
@@ -99,7 +91,7 @@ const Main = () => {
           <Button
             title="스크롤 ref 테스트 이동"
             type="primary"
-            danger
+            danger="danger"
             onClick={() => {
               navigate("/scrollRefTest");
             }}
@@ -150,6 +142,49 @@ const Main = () => {
           >
             useEffectTest 테스트
           </Button>
+
+          <br />
+          <Button
+            title="useReducerTest 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/useReducerTest");
+            }}
+          >
+            useReducerTest 테스트
+          </Button>
+
+          <br />
+          <Button
+            title="useReducerTest2 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/useReducerTest2");
+            }}
+          >
+            useReducerTest2 테스트
+          </Button>
+          <br />
+          <Button
+            title="useMemoTest 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/useMemoTest");
+            }}
+          >
+            useMemoTest 테스트
+          </Button>
+          <br />
+          <Button
+            title="useCallbackTest 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/useCallbackTest");
+            }}
+          >
+            useCallbackTest 테스트
+          </Button>
+          
         </Container>
       </div>
     </Wrapper>

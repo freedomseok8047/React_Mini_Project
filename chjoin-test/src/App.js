@@ -10,23 +10,25 @@ import { Button, Space, DatePicker, version } from "antd";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // 스크롤 ref 테스트 컴포넌트 가져오기.
-import RefPracticeScrollTest from "./\bch5_component/RefPracticeScrollTest"
+import RefPracticeScrollTest from "./\bch5_component/RefPracticeScrollTest";
 import DataListKeyAddDelTest from "./ch6_component/DataListKeyAddDelTest";
 import LifeCycleTest from "./ch7_classLifeCycle/LifeCycleTest";
 import InfoTestUseState from "./ch8_hooksTest/InfoTestUseState";
 import InfoTestUseEffect from "./ch8_hooksTest/InfoTestUseEffect";
+import CountUseReducerTest from "./ch8_hooksTest/CountUseReducerTest";
+import InfoTestUseReducer from "./ch8_hooksTest/InfoTestUseReducer";
+import AverageUseMemoTest from "./ch8_hooksTest/AverageUseMemoTest";
+import AverageUseCallbackTest from "./ch8_hooksTest/AverageUseCallbackTest";
 
 function App() {
   return (
-    // 페이지 이동을 위한 설정 2. 전체 요소를
-    //BrowserRouter 로 감싸기.
-    // 구성요소는 Routes -> Route 로 구성할 예정.
+    // 페이지 이동을 위한 설정 2. 전체 요소를 BrowserRouter 로 감싸기. 구성요소는 Routes -> Route 로 구성할 예정.
     <BrowserRouter>
       <Routes>
         {/* 메인으로 사용할(index->주소에서 : / ) 페이지를 App 또는 Main.js 로 해도 됨 */}
-        <Route index element={<Main />} />
+        <Route index="index" element={<Main />} />{" "}
         {/* 주소: http://localhost:3000/join -> 해당 페이지 안내 : element={<이동할 컴포넌트>} */}
-        <Route path="join" element={<Join />} />
+        <Route path="join" element={<Join />} />{" "}
         {/* 추가, 3장에서 연습했던, MyComp라는 컴포넌트 페이지 이동에 추가해보기 */}
         <Route path="mycount" element={<MyCount />} />
         <Route path="scrollRefTest" element={<RefPracticeScrollTest />} />
@@ -34,6 +36,10 @@ function App() {
         <Route path="ClassLifeCycleTest" element={<LifeCycleTest />} />
         <Route path="useStateTest" element={<InfoTestUseState />} />
         <Route path="useEffectTest" element={<InfoTestUseEffect />} />
+        <Route path="useReducerTest" element={<CountUseReducerTest />} />
+        <Route path="useReducerTest2" element={<InfoTestUseReducer />} />
+        <Route path="useMemoTest" element={<AverageUseMemoTest />} />
+        <Route path="useCallbackTest" element={<AverageUseCallbackTest />} />
       </Routes>
     </BrowserRouter>
   );

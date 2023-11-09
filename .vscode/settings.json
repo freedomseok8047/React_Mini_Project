@@ -1,9 +1,10 @@
 {
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontSize": 20,
+  "editor.fontSize": 17,
   "editor.tabSize": 2,
-  "editor.fontFamily": "Arial",
+  "editor.fontFamily": "'D2Coding'",
+  "editor.fontLigatures": true,
   "editor.mouseWheelZoom": true,
   "git.autofetch": true,
   "editor.minimap.enabled": false,
