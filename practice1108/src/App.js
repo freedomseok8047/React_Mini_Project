@@ -1,30 +1,71 @@
 import "./App.css";
-// 자식 컴포넌트 요소
-import Join from "./component/Join";
-import Main from "./component/Main";
-import Login from "./component/Login";
-import Practice from "./component/Practice"
+import React, { useEffect, useState,useRef } from "react";
 
-// 페이지 이동을 위한 설정 1
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Controller from "./useEffectPractice/Controller";
+import Viewer from "./useEffectPractice/Viewer";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
+
+  const handleSetCount = (value) => {
+    setCount(count + value);
+  };
+  const handleChangeText = (event) => {
+    setText(event.target.value);
+  };
+
+  const didMountRef = useRef(false);
+
+  // useEffect(() => {
+  //   console.log("count or text 업데이트: ", count,text);
+  // }, [count,text]);
+
+  // 컴포넌트가 업데이트 될때만 실행
+  useEffect(() => {
+
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    }else {
+    console.log("컴포넌트 업데이트!",count,text);
+    }
+  },[count,text]);
+
+  // 컴포넌트가 마운트 될때만 실행
+  useEffect(() => {
+    console.log("Component Mounted!");
+  },[]);
+
+  // 질문?
+  // 가설: 최초 실행했을 때 마운트만되고 업데이트 발생X
+  // ->  console.log("Component Mounted!"); 만 실행되어야 함 
+
+  // 실제 결과 : 
+  // Component Mounted! -> console.log("Component Mounted!");
+  // 컴포넌트 업데이트! -> console.log("컴포넌트 업데이트!");
+  // Component Mounted! -> console.log("Component Mounted!");
+
+  // 결론 : 최초 실행시 제어하지 못한 업데이트 발생! -> 리랜더링 -> 리마운트
+
+  // 하여, console.log("컴포넌트 업데이트!",count,text); 찍어보니
+  // count : 0 -> 최초 실행인데 왜 업데이트 발생??
+
+  // 해결 -> index.js에 <React.StrictMode> 제거 -> 문법 검사 제거 -> 마운트 한번 만 실행 됨!
+
   return (
-    // 페이지 이동을 위한 설정 2. 전체 요소를
-    //BrowserRouter 로 감싸기.
-    // 구성요소는 Routes -> Route 로 구성할 예정.
-    <BrowserRouter>
-      <Routes>
-        {/* 메인으로 사용할(index->주소에서 : / ) 페이지를 App 또는 Main.js 로 해도 됨 */}
-        <Route index element={<Main />} />
-        {/* 주소: http://localhost:3000/join -> 해당 페이지 안내 : element={<이동할 컴포넌트>} */}
-        <Route path="join" element={<Join />} />
-        {/* 추가, Login 컴포넌트 페이지 이동에 추가해보기 */}
-        <Route path="login" element={<Login />} />
-        {/* 추가, Login 컴포넌트 페이지 이동에 추가해보기 */}
-        <Route path="practice" element={<Practice />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <h1>Simple Counter</h1>
+      <section>
+        <input type="text" value={text} onChange={handleChangeText} />
+      </section>
+      <section>
+        <Viewer count={count} />
+      </section>
+      <section>
+        <Controller handleSetCount={handleSetCount} />
+      </section>
+    </div>
   );
 }
 

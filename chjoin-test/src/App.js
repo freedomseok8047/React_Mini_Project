@@ -4,6 +4,7 @@ import "./App.css";
 import Join from "./component/Join";
 import Main from "./component/Main";
 import MyCount from "./component/MyCount";
+import styled from "styled-components";
 
 import { Button, Space, DatePicker, version } from "antd";
 // 페이지 이동을 위한 설정 1
@@ -19,6 +20,13 @@ import CountUseReducerTest from "./ch8_hooksTest/CountUseReducerTest";
 import InfoTestUseReducer from "./ch8_hooksTest/InfoTestUseReducer";
 import AverageUseMemoTest from "./ch8_hooksTest/AverageUseMemoTest";
 import AverageUseCallbackTest from "./ch8_hooksTest/AverageUseCallbackTest";
+import AverageUseRefTest from "./ch8_hooksTest/AverageUseRefTest";
+import AverageUseParamsTest8 from "./ch8_hooksTest/AverageUseParamsTest8";
+import InfoTestCustomHooks9 from "./ch8_hooksTest/InfoTestCustomHooks9";
+import TestSass from "./ch9_component/TestSass";
+import StyledComponentsTest from "./ch9_component/StyledComponentsTest";
+import TodoMain from "./ch10_TodoMain/TodoMain";
+
 
 function App() {
   return (
@@ -40,6 +48,13 @@ function App() {
         <Route path="useReducerTest2" element={<InfoTestUseReducer />} />
         <Route path="useMemoTest" element={<AverageUseMemoTest />} />
         <Route path="useCallbackTest" element={<AverageUseCallbackTest />} />
+        <Route path="useRefTest" element={<AverageUseRefTest />} />
+        {/* useParams test 설정2 : path="useParamsTest/:id"*/}
+        <Route path="useParamsTest/:id" element={<AverageUseParamsTest8 />} />
+        <Route path="customHooks/:id" element={<InfoTestCustomHooks9 />} />
+        <Route path="sassTest" element={<TestSass />} />
+        <Route path="StyledCmponentTest" element={<StyledComponentsTest/>} />
+        <Route path="todoMain" element={<TodoMain/>} />
       </Routes>
     </BrowserRouter>
   );

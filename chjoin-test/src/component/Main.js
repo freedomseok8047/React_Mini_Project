@@ -185,6 +185,72 @@ const Main = () => {
             useCallbackTest 테스트
           </Button>
           
+          <br />
+          <Button
+            title="useRefTest 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/useRefTest");
+            }}
+          >
+            useRefTest 테스트
+          </Button>
+
+          <br />
+          <Button
+            title="useParamsTest 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/useParamsTest");
+            }}
+          >
+            useParamsTest 테스트 주소에 /숫자 붙이기 ex) /10
+          </Button>
+
+          <br />
+          <Button
+            title="customHooks 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/customHooks");
+            }}
+          >
+            customHooks 테스트
+          </Button>
+
+          <br />
+          <Button
+            title="sassTest 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/sassTest");
+            }}
+          >
+            sassTest 테스트
+          </Button>
+
+          <br />
+          <Button
+            title="StyledCmponentTest 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/StyledCmponentTest");
+            }}
+          >
+            StyledCmponentTest 테스트
+          </Button>
+
+          <br />
+          <Button
+            title="TodoMain 미니프로잭트"
+            type="primary"
+            onClick={() => {
+              navigate("/todoMain");
+            }}
+          >
+            TodoMain 미니프로잭트
+          </Button>
+
         </Container>
       </div>
     </Wrapper>
