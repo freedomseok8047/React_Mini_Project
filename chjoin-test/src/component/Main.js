@@ -15,12 +15,14 @@ const MainTitleTextCss = styled.p`
   font-size: 30px;
   font-weight: bold;
   text-align: center;
+  font-family: "Orbit";
 `;
 const MainTextCss = styled.p`
   font-size: 20px;
   font-weight: bold;
   background-color: aqua;
   text-align: center;
+  font-family: "Orbit";
 `;
 // Wrapper 라고 해서 블록 부분 설정
 const Wrapper = styled.div`
@@ -30,6 +32,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: conter;
+  font-family: "Orbit";
 `;
 
 // Container 만들기
@@ -249,6 +252,72 @@ const Main = () => {
             }}
           >
             TodoMain 미니프로잭트
+          </Button>
+
+          <br />
+          <Button
+            title="immerTest"
+            type="primary"
+            onClick={() => {
+              navigate("/immerTest");
+            }}
+          >
+            immerTest
+          </Button>
+
+          <br />
+          <Button
+            title="immerTestZone"
+            type="primary"
+            onClick={() => {
+              navigate("/immerTestZone");
+            }}
+          >
+            immerTestZone, 불변성 쉽게 유지
+          </Button>
+
+          <br />
+          <Button
+            title="ApiTest"
+            type="primary"
+            onClick={() => {
+              navigate("/ApiTest");
+            }}
+          >
+            ApiTest 확인
+          </Button>
+
+          <br />
+          <Button
+            title="ApiTest2"
+            type="primary"
+            onClick={() => {
+              navigate("/ApiTest2");
+            }}
+          >
+            ApiTest2 확인
+          </Button>
+
+          <br />
+          <Button
+            title="ApiTest3"
+            type="primary"
+            onClick={() => {
+              navigate("/ApiTest3");
+            }}
+          >
+            ApiTest3 확인
+          </Button>
+
+          <br />
+          <Button
+            title="newsPageTest/:category"
+            type="primary"
+            onClick={() => {
+              navigate("/newsPageTest/:category");
+            }}
+          >
+            newsPageTest/:category
           </Button>
 
         </Container>

@@ -26,6 +26,12 @@ import InfoTestCustomHooks9 from "./ch8_hooksTest/InfoTestCustomHooks9";
 import TestSass from "./ch9_component/TestSass";
 import StyledComponentsTest from "./ch9_component/StyledComponentsTest";
 import TodoMain from "./ch10_TodoMain/TodoMain";
+import ImmerTest from "./ch12_immerTest/ImmerTest";
+import TestZone from "./ch12_immerTest/TestZone";
+import ApiTest from "./ch13_API_PublicDataTest/ApiTest";
+import ApiTestKoreaNews from "./ch13_API_PublicDataTest/ApiTestKoreaNews";
+import MainNews from "./ch13_API_PublicDataTest/component/MainNews";
+import NewsPage from "./ch13_API_PublicDataTest/page/NewsPage";
 
 
 function App() {
@@ -55,6 +61,12 @@ function App() {
         <Route path="sassTest" element={<TestSass />} />
         <Route path="StyledCmponentTest" element={<StyledComponentsTest/>} />
         <Route path="todoMain" element={<TodoMain/>} />
+        <Route path="immerTest" element={<ImmerTest/>} />
+        <Route path="immerTestZone" element={<TestZone/>} />
+        <Route path="ApiTest" element={<ApiTest/>} />
+        <Route path="ApiTest2" element={<ApiTestKoreaNews/>} />
+        <Route path="ApiTest3" element={<MainNews/>} />
+        <Route path="newsPageTest/:category" element={<NewsPage />} />
       </Routes>
     </BrowserRouter>
   );
