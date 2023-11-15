@@ -187,7 +187,7 @@ const Main = () => {
           >
             useCallbackTest 테스트
           </Button>
-          
+
           <br />
           <Button
             title="useRefTest 테스트 "
@@ -314,12 +314,33 @@ const Main = () => {
             title="newsPageTest/:category"
             type="primary"
             onClick={() => {
-              navigate("/newsPageTest/:category");
+              navigate("/newsPageTest/all");
             }}
           >
-            newsPageTest/:category
+            newsPageTest/:category 확인
           </Button>
 
+          <br />
+          <Button
+            title="contextAPITest"
+            type="primary"
+            onClick={() => {
+              navigate("/contextAPITest");
+            }}
+          >
+            contextAPITest 확인
+          </Button>
+
+          <br />
+          <Button
+            title="OnlyPublicDataMain"
+            type="primary"
+            onClick={() => {
+              navigate("/OnlyPublicDataMain");
+            }}
+          >
+            onlyPublicDateTest 확인
+          </Button>
         </Container>
       </div>
     </Wrapper>
