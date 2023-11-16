@@ -4,15 +4,9 @@ import styled, { css } from "styled-components";
 
 // 카테고리 목록, 보이는 건 한글, 값은 영어로 할당.
 const categories = [
-  { name: "all", text: "전체보기" },
-  { name: "business", text: "비즈니스" },
-  { name: "entertainment", text: "엔터테인먼트" },
-  { name: "health", text: "건강" },
-  { name: "science", text: "과학" },
-  { name: "sports", text: "스포츠" },
-  { name: "technology", text: "기술" },
   { name: "busanFood", text: "부산테마먹거리" },
   { name: "busanWalking", text: "부산도보여행" },
+  { name: "Trip_for_Autumn", text: "부산도보여행" },
 ];
 // css
 const CategoriesBlockCss = styled.div`
@@ -108,7 +102,7 @@ const CategoriesCss = styled(NavLink)`
 // };
 
 // NavLink 방식. 변경.
-const Categories = ({ category, onSelect }) => {
+const Categories2 = ({ category, onSelect }) => {
   return (
     <CategoriesBlockCss>
       {categories.map((c) => (
@@ -127,4 +121,4 @@ const Categories = ({ category, onSelect }) => {
   );
 };
 
-export default Categories;
+export default Categories2;

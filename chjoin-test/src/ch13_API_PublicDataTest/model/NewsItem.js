@@ -9,6 +9,8 @@ import styled from "styled-components";
 const NewsItemCss = styled.div`
   display: flex;
   font-family: "Nanum Gothic", sans-serif;
+  border-top: 0.5px solid black;
+  
   /* border: 0.5px solid black; */
 
   // 이미지, thumbnail
@@ -20,6 +22,8 @@ const NewsItemCss = styled.div`
       height: 130px;
       // 해당사이즈에 비율에 맞게 이미지 크기 조정
       object-fit: cover;
+      font-family: "Nanum Gothic", sans-serif;
+      border-top: 0.5px solid black;
     }
   }
 
