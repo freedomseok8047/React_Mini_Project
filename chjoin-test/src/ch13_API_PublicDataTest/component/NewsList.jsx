@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import NewsItem from "../model/NewsItem";
+import NewsItem from "../model/News/NewsItem";
 import axios from "axios";
-import PublicItem from "../model/PublicItem";
-import PublicItem2 from "../model/PublicItem2";
+import PublicItem from "../model/News/PublicItem";
+import PublicItem2 from "../model/News/PublicItem2";
 
 // 뉴스 아이템 요소를 출력을 감싸는 목록부분에 해당하고,
 // 미디어쿼리 넣어서, 약간 반응형으로, 특정 크기를 기준으로
@@ -14,7 +14,7 @@ const NewsListCss = styled.div`
   width: 768px;
   margin: 0 auto;
   margin-top: 2rem;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   @media screen and (max-width: 768px) {
     width: 100%;
     padding-left: 1rem;
@@ -30,7 +30,7 @@ const NewsListCss = styled.div`
 //   urlToImage: "https://via.placeholder.com/160",
 // };
 
-const NewList = ({category}) => {
+const NewList = ({ category }) => {
   // useEffect 이용해서, 마운트시, 최초 1회 데이터 받아오기.
   // create, update, delete 없어서,
   // 단순, 데이터 만 가져오기 때문에,
@@ -49,7 +49,7 @@ const NewList = ({category}) => {
 
       try {
         // 카테고리별로 , url 주소 변경하기
-        const query = category === "all"? "" : `&category=${category}`;
+        const query = category === "all" ? "" : `&category=${category}`;
         // 부산테마먹거리 API 주소, busanFood
         // 리팩토링은 잠시 대기.
         // const query2 = category === "busanFood" ? `FoodService/getFoodKr` : "";

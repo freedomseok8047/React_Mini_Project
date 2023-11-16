@@ -1,4 +1,4 @@
-// 가을_추천_여행지
+// 부산 테마 먹거리 요소로 구성
 // 기존 css 재사용
 // 가져올 데이터 부분 변경
 import React from 'react';
@@ -49,35 +49,35 @@ const NewsItemCss = styled.div`
 `;
 
 
-const PublicItem3 = ({article}) => {
+const PublicItem2 = ({article}) => {
  // article: 각 기사의 내용을 담은 객체
   // 비구조화 할당으로 각 각 할당
-  // 선택할 데이터 : 1)galTitle 2)galWebImageUrl 3)galPhotographyLocation 4)galSearchKeyword
-  const { galTitle, galWebImageUrl,galPhotographyLocation,galSearchKeyword } = article
+  // 선택할 요소: 1)MAIN_TITLE 2)MAIN_IMG_THUMB 3)TRFC_INFO 4)ITEMCNTNTS
+  const { MAIN_TITLE, MAIN_IMG_THUMB,TRFC_INFO,ITEMCNTNTS } = article;
   return (
     <NewsItemCss>
       {/* 조건부 렌더링으로 출력 */}
 
       {
-        galWebImageUrl && (<div className="thumbnail">
+        MAIN_IMG_THUMB && (<div className="thumbnail">
           {/* 링크 클릭시 , target="blank": 새창으로 열기
           rel="noopener noreferrer" : 새창으로 열었을때,
           원본 링크의 참조라든지, 개인 정보 부분 막아줌 */}
-            <img src={galWebImageUrl} alt="thumbnail" />
+            <img src={MAIN_IMG_THUMB} alt="thumbnail" />
             
           </div>
         )
       }
       <div className="contents">
         <h2>
-            {galTitle}
+            {MAIN_TITLE}
         </h2>
-        <p>위치 : {galPhotographyLocation}</p>
-        <p>설명 : {galSearchKeyword}</p>
+        <p>교통정보 : {TRFC_INFO}</p>
+        <p>설명 : {ITEMCNTNTS}</p>
       </div>
       
     </NewsItemCss>
   );
 };
 
-export default PublicItem3;
+export default PublicItem2;

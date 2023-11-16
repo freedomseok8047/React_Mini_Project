@@ -5,7 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 // css 작업대상,
 // 1) 이미지, 2) 콘텐츠 내용
-const NewsItemCss = styled.div`
+const PublicItemCss = styled.div`
   display: flex;
   font-family: 'Nanum Gothic', sans-serif;
   /* border: 0.5px solid black; */
@@ -49,16 +49,14 @@ const NewsItemCss = styled.div`
 `;
 
 
-const PublicItem = ({article}) => {
+const PublicItem2 = ({publicData}) => {
  // article: 각 기사의 내용을 담은 객체
   // 비구조화 할당으로 각 각 할당
-  // 선택할 요소: 1)MAIN_TITLE, 2)CNTCT_TEL 3)MAIN_IMG_THUMB 4)ADDR1
-  const { MAIN_TITLE, CNTCT_TEL, MAIN_IMG_THUMB, ADDR1 } = article
+  // 선택할 요소: 1)MAIN_TITLE 2)MAIN_IMG_THUMB 3)TRFC_INFO 4)ITEMCNTNTS
+  const { MAIN_TITLE, MAIN_IMG_THUMB,TRFC_INFO,ITEMCNTNTS } = publicData;
   return (
-    <NewsItemCss>
-      {/* 조건부 렌더링으로 출력 
-      썸네일 사진 있으면 렌더링,
-       없으면 null*/}
+    <PublicItemCss>
+      {/* 조건부 렌더링으로 출력 */}
 
       {
         MAIN_IMG_THUMB && (<div className="thumbnail">
@@ -74,12 +72,12 @@ const PublicItem = ({article}) => {
         <h2>
             {MAIN_TITLE}
         </h2>
-        <p>주소: {CNTCT_TEL}</p>
-        <p>연락처: {ADDR1}</p>
+        <p>교통정보 : {TRFC_INFO}</p>
+        <p>설명 : {ITEMCNTNTS}</p>
       </div>
       
-    </NewsItemCss>
+    </PublicItemCss>
   );
 };
 
-export default PublicItem;
+export default PublicItem2;

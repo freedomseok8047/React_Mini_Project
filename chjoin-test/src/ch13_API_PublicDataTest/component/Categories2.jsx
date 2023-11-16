@@ -4,15 +4,15 @@ import styled, { css } from "styled-components";
 
 // 카테고리 목록, 보이는 건 한글, 값은 영어로 할당.
 const categories = [
-  { name: "busanFood", text: "부산테마먹거리" },
-  { name: "busanWalking", text: "부산도보여행" },
-  { name: "Trip_for_Autumn", text: "부산도보여행" },
+  { name: "busanFood", text: "부산 테마먹거리 /" },
+  { name: "busanWalking", text: "부산 도보여행 /" },
+  { name: "TripForAutumn", text: "가을 추천여행지 /" },
 ];
 // css
 const CategoriesBlockCss = styled.div`
   display: flex;
   padding: 1rem;
-  width: 768px;
+  width: 1000px;
   margin: 0 auto;
   /* background-image: url("https://cdn.pixabay.com/animation/2022/07/30/22/01/22-01-29-66_512.gif");
   background-size: 10%; */
@@ -111,7 +111,7 @@ const Categories2 = ({ category, onSelect }) => {
           // NavLink 변경 부분
           className={({ isActive }) => (isActive ? "active" : undefined)}
           to={
-            c.name === "all" ? "/newsPageTest/all" : `/newsPageTest/${c.name}`
+            c.name === "busanFood" ? "/onlyPublicDateTest/busanFood" : `/onlyPublicDateTest/${c.name}`
           }
         >
           {c.text}
