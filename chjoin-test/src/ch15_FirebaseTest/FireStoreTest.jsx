@@ -30,7 +30,7 @@ const FireStoreTest = () => {
 
   // 데이터 가져오기 샘플
 
-  const getDoc = async () => {
+  const testGetDoc = async () => {
     // db: 공통 도구
     // cities : 컬렉션에 있는
     // LA 문서를 가져올 예정 
@@ -52,7 +52,7 @@ const FireStoreTest = () => {
         Test SetDoc
       </Button>
       &nbsp; &nbsp;
-      <Button type="primary" onClick={() => getDoc()}>
+      <Button type="primary" onClick={() => testGetDoc()}>
         Test getDoc
       </Button>
     </div>
