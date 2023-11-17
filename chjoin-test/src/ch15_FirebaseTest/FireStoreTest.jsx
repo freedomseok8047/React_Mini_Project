@@ -2,17 +2,29 @@ import React from "react";
 import { Button } from "antd";
 
 // 스토어
+// 기본 CRUD TEST
 
 // 준비작업 샘플 테스트1
 // import
 import { db } from "./firebaseConfig";
 
+
 // 공식 문서 샘플코드 그대로 가져온 경우
 // https://firebase.google.com/docs/firestore/manage-data/add-data?hl=ko#web-modular-api
+// 데이터 쓰기 import
 import { doc, setDoc } from "firebase/firestore";
+
 // 공식 문서 샘플코드 그대로 가져온 경우
 // https://firebase.google.com/docs/firestore/query-data/get-data?hl=ko
+// 데이터 불러오기 import
 import { getDoc } from "firebase/firestore";
+
+// 데이터 추가 import
+import { collection, addDoc, Timestamp } from "firebase/firestore"; 
+// 데이터 수정 import
+import { updateDoc } from "firebase/firestore";
+// 데이터 삭제 import
+import { deleteDoc } from "firebase/firestore";
 
 const FireStoreTest = () => {
   const testSetDoc = async () => {
@@ -46,6 +58,37 @@ const FireStoreTest = () => {
     }
   };
 
+  // 데이터 추가
+const testAddDoc = async () => {
+  const docRef = await addDoc(collection(db, "cities"), {
+    name: "Tokyo",
+    country: "Japan",
+    regDate: Timestamp.fromDate(new Date()),
+  });
+  console.log("Document written with ID: ", docRef.id);
+  
+};
+
+// 데이터 업데이트
+const testUpdateDoc = async () => {
+  // pk 아이디가 LA인 문서를 업데이트 한다.
+  const LARef = doc(db, "cities", "LA");
+
+  await updateDoc(LARef, {
+    capital: false,
+    name: "LA HollyWood",
+    regDate: Timestamp.fromDate(new Date()),
+  });
+};
+
+// 데이터 삭제
+// import { doc, deleteDoc } from "firebase/firestore";
+const testDeleteDoc = async () => {
+  // pk 아이디가 BUBxhQO7niUXFqqEmSqp인 문서를 삭제한다.
+  await deleteDoc(doc(db, "cities", "BUBxhQO7niUXFqqEmSqp"));
+};
+
+
   return (
     <div>
       <Button type="primary" onClick={() => testSetDoc()}>
@@ -54,6 +97,18 @@ const FireStoreTest = () => {
       &nbsp; &nbsp;
       <Button type="primary" onClick={() => testGetDoc()}>
         Test getDoc
+      </Button>
+      &nbsp; &nbsp;
+      <Button type="primary" onClick={() => testAddDoc()}>
+        Test addDoc
+      </Button>
+      &nbsp; &nbsp;
+      <Button type="primary" onClick={() => testUpdateDoc()}>
+        Test updateDoc
+      </Button>
+      &nbsp; &nbsp;
+      <Button type="primary" onClick={() => testDeleteDoc()}>
+        Test deleteDoc
       </Button>
     </div>
   );

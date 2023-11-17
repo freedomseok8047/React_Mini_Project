@@ -8,6 +8,8 @@ import styled from 'styled-components';
 const PublicItemCss = styled.div`
   display: flex;
   font-family: 'Nanum Gothic', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 92% 8% 92% 8% / 8% 91% 9% 92% ;
   /* border: 0.5px solid black; */
 
   // 이미지, thumbnail
