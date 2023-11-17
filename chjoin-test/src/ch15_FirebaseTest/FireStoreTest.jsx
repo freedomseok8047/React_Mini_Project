@@ -12,7 +12,7 @@ import { db } from "./firebaseConfig";
 import { doc, setDoc } from "firebase/firestore";
 // 공식 문서 샘플코드 그대로 가져온 경우
 // https://firebase.google.com/docs/firestore/query-data/get-data?hl=ko
-import { doc, getDoc } from "firebase/firestore";
+import { getDoc } from "firebase/firestore";
 
 const FireStoreTest = () => {
   const testSetDoc = async () => {
@@ -51,7 +51,7 @@ const FireStoreTest = () => {
       <Button type="primary" onClick={() => testSetDoc()}>
         Test SetDoc
       </Button>
-      &nbsp &nbsp
+      &nbsp; &nbsp;
       <Button type="primary" onClick={() => getDoc()}>
         Test getDoc
       </Button>
