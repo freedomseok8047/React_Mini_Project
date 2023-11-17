@@ -34,6 +34,7 @@ import MainNews from "./ch13_API_PublicDataTest/component/MainNews";
 import NewsPage from "./ch13_API_PublicDataTest/page/NewsPage";
 import TestColorMain from "./ch14_ContextAPITest/TestColorMain";
 import PublicDataPage from "./ch13_API_PublicDataTest/page/PublicDataPage";
+import FireMain from "./ch15_FirebaseTest/FireMain";
 
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
         {/* <Route path="contextAPITest" element={<TestColorBox />} /> */}
         <Route path="contextAPITest" element={<TestColorMain/>} />
         <Route path="/onlyPublicDateTest/:category" element={<PublicDataPage/>} />
+        <Route path="/firebaseTest" element={<FireMain/>} />
 
       </Routes>
     </BrowserRouter>

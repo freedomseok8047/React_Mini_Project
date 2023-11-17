@@ -341,6 +341,17 @@ const Main = () => {
           >
             onlyPublicDateTest 확인
           </Button>
+
+      <br />
+          <Button
+            title="/firebaseTest"
+            type="primary"
+            onClick={() => {
+              navigate("/firebaseTest");
+            }}
+          >
+            firebaseTest
+          </Button>
         </Container>
       </div>
     </Wrapper>
