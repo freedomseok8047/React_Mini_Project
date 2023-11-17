@@ -5,7 +5,7 @@ import TodoListItem from "./TodoListItem";
 // 페이징 처리해주는 가상의 리스트 불러오기
 import {List} from "react-virtualized";
 
-const Main_css = styled.div`
+const MainCss = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
